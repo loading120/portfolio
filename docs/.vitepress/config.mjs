@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
+    base: '/portfolio/',
     themeConfig:{
         siteTitle:"portfolio",
         sidebar:{
