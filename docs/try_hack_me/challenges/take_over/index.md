@@ -34,3 +34,7 @@ I started by running a basic Nmap scan to discover open ports and the service ve
 
 ```bash
 sudo nmap -sV https://futurevera.com
+```
+From that scan i could determine that both port 80 and 443 were open
+
+### 3.2 Using gobuster to enumerate the subdoamins
