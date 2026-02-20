@@ -21,7 +21,8 @@ export default defineConfig({
                             text: 'Challenges',
                             collapsed: true,
                             items: [
-                                { text: 'Take over', link: '/try_hack_me/challenges/take_over/' }
+                                { text: 'Take over', link: '/try_hack_me/challenges/take_over/' },
+                                { text: 'MD2PDF', link: '/try_hack_me/challenges/MD2PDF/' }
                   
                             ]
                         }
