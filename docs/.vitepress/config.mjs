@@ -10,7 +10,7 @@ export default defineConfig({
                     text:'kali',
                     collapsed:false,
                     items: [
-                        {text: 'Dual Boot',link:'kali/dual-boot/'}
+                        {text: 'Dual Boot',link:'/kali/dual-boot/'}
                     ]
                 },
                 {

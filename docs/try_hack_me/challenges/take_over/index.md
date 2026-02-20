@@ -73,6 +73,16 @@ I entered in the support subdomain into my web browser and veiwed the certificat
 
 ![Result](images/certificate_for_support.futurevera.thm.png)
 
+### 3.4 Checking the hidden DNS
+
+I then entered in that DNS and it came up with a server not found page which had the flag in it:
+
+![Flag](images/server_not_found.png)
+
+## 4. Conclusion
+
+This room was very intresting and was good practice to learn and understand subdomain take overs. I also learnt how to use gobuster with a wordlist from seclists within kali to help me.
+
 
 
 
