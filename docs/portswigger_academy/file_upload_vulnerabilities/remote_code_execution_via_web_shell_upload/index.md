@@ -52,3 +52,5 @@ result:
 ## 7. Conclusion
 
 This lab highlights how insecure file upload functionality can lead compromise in the website. By bypassing weak validation and uploading a web shell, an attacker can veiw files and pages that he wouldn't be able to veiw as a normal user.
+
+![](images/Snapchat-1048773455.jpg)
