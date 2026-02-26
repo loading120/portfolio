@@ -18,7 +18,7 @@ During initial exploration of the site:
 - The webiste provides an image upload feature 
 - looked at the POST and GET requests through the burp suite proxy tab    
 
-## 5. Attack Strategy
+## 5. Execution
 1. Intercept the upload request using Burp Suite:  
 
 ![](images/POST_request.png)
