@@ -38,6 +38,7 @@ export default defineConfig({
                             collapsed: true,
                             items: [
                                 { text: 'Remote code execution via web shell upload', link: '/portswigger_academy/file_upload_vulnerabilities/remote_code_execution_via_web_shell_upload/' },
+                                { text: 'Web shell upload via Content-Type restriction bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_content-Type_restriction_bypass/' }
                   
                             ]
                         }
