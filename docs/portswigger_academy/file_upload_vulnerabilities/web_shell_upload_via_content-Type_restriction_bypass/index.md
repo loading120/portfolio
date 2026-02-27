@@ -27,28 +27,54 @@ This lab contains a vulnerable image upload function. It attempts to prevent use
 
 ![](images/php_file_blocked.png)
 
-- What weaknesses you identified
-- How you planned to exploit them
+- I then used Burp Suite to examine the POST request of the php file upload:
 
-*(Keep this high‑level and non‑harmful.)*
+![](images/POST_request_for_php_file.png)
 
+- I then could just edit the content type header as it trusted user-controlled meta-data:
+
+![](images/content_type.png)
+
+- As a result of this the php file could then be uploaded to the server successfully:
+
+![](images/confirmation_of_php_upload.png)
+
+- I then saw the GET request for the file which also showed me where they stored it which is another flaw that you shouldn't allow users to be able to see:
+
+![](images/GET_request_of_php_file.png)
+
+- Now that the file is uploaded I can then modify the GET request and use the cmd function to list the contents of ```/home/carlos/secret```
+
+![](images/modifying_GET_request.png)
+
+- Once that request was sent I could then veiw the contents of the file/folder I was trying to view:
+
+![](images/response_of_GET_request.png)
 
 ## 6. Key Findings
-- What the vulnerability allowed
-- Why the application was exposed
-- What data or behaviour was demonstrated in the lab
 
-## 9. Mitigation Recommendations
+### 6.1 What the vulnerability allowed
+
+- The file upload feature had a flaw that let someone upload a file the server would actually execute, instead of simply treating it like a normal image. Because the server trusted the Content-Type Header without actually checking the type of image and saved uploaded files in a location where code could be executed, an attacker could sneak in malicious server-side code and then activate it through modifying regular browser request, and could then potentially access unauthorised files or folders.
+
+### 6.2 Why the application was exposed
+
+- It relied on client‑controlled metadata (Content-Type) instead of validating the actual file content.
+
+- It did not enforce strict file extension or MIME‑type checks.
+
+- Uploaded files were stored in a web‑accessible directory where the server executed them.
+
+- There were no safeguards such as content inspection or execution restrictions on the upload directory.
+
+## 7. Mitigation Recommendations
+
 - Proper server-side validation
 - Strong file-type enforcement
 - Secure storage locations
 - Least-privilege access controls
 - Logging and monitoring
 
-## 10. Conclusion
-Summarise what the lab demonstrated, what you learned, and why the vulnerability matters in real-world applications.
+## 8. Conclusion
 
-## 11. Appendix (Optional)
-- Extra screenshots
-- Notes
-- References
+- Overall this was an educational lab which helped me understand how important it is to not allow users to access important meta data and to make sure to validate content-type data and teaching me how to bypass it.
