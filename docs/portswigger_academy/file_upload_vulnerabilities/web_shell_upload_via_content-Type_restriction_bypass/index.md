@@ -13,16 +13,20 @@ This lab contains a vulnerable image upload function. It attempts to prevent use
 - Burp Suite
 
 ## 4. Reconnaissance & Initial Observations/plan
-Describe:
-- How you approached the application initially
-- Any interesting behaviour you noticed
-- Relevant endpoints, features, or parameters
-- Screenshots or notes from proxy tools (optional)
+
+- I loaded up the lab and logged into an account using given credentials
+- I then saw the upload feature so i loaded up Burp Suite to have a look at it.
 
 ## 5. Execution
-Explain the high‑level approach you used to solve the lab:
-- What requests you intercepted
-- What parameters or behaviours you examined
+
+- tried to upload a php shell file I already had which had the contents of ```<?php system($_REQUEST['cmd']); ?>```
+
+![](images/uploading_shell_php.png)
+
+- It then blocked me as it didn't allow for the php file type to be uploaded
+
+![](images/php_file_blocked.png)
+
 - What weaknesses you identified
 - How you planned to exploit them
 
