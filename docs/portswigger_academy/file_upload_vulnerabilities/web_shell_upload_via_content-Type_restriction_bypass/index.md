@@ -5,9 +5,12 @@
 This lab contains a vulnerable image upload function. It attempts to prevent users from uploading unexpected file types, but relies on checking user-controllable input to verify this. 
 
 ## 2. Learning Objectives
-- Objective 1
-- Objective 2
-- Objective 3
+- Understand how insecure file upload mechanisms can be abused when servers rely on weak or client‑controlled validation such as the Content-Type header.
+
+- Identify how improper handling of uploaded files can lead to remote code execution when files are stored in executable directories.
+
+- Analyze HTTP requests and responses to spot weaknesses in upload workflows, including how metadata manipulation can bypass intended restrictions.
+
 
 ## 3. Tools Used
 - Burp Suite
