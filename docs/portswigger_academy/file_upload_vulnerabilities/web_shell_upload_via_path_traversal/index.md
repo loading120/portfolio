@@ -19,7 +19,7 @@ Describe:
 - Uploaded files are stored in a predictable directory such as /images/ or /files/.
 - It accepts common traverseries such as ../
 
-## 5. Attack Strategy
+## 5. Execution
 - The first thing I did was to upload my php shell with the upload feature:
 
 ![](images/uploading_shell.png)
@@ -29,10 +29,11 @@ Describe:
 ![](images/viewing_POST_request.png)
 
 - I used an online url encoder to encode the command ```../``` and then entered it into my POST request:
+- This was necessary because encoding the traversal sequence allowed it to bypass any superficial filtering and instruct the server to write the file outside of  the intended directory.
 
 ![](images/URL_encoded.png)
 
-- I then saw that it had uploaded with ```../``` which was a very good sign:
+- I then saw that it had uploaded with ```../``` which was a very good sign that the traversal command had worked:
 
 ![](images/upload_confirmed.png)
 
@@ -44,29 +45,13 @@ Describe:
 
 ![](images/flag.png)
 
-## 6. Execution (High-Level)
-Document the steps you took conceptually:
-- What you modified
-- How the server responded
-- How you confirmed the vulnerability
-- Any required output the lab asked for
 
-## 7. Key Findings
-- What the vulnerability allowed
-- Why the application was exposed
-- What data or behaviour was demonstrated in the lab
 
-## 8. Mitigation Recommendations
-- Proper server-side validation
-- Strong file-type enforcement
-- Secure storage locations
-- Least-privilege access controls
-- Logging and monitoring
+## 6. Key Findings
+- user controlled file-names are trusted by the server
+- server side validation of file type is weak
+- Executable file extensions are not filtered
 
-## 9. Conclusion
-Summarise what the lab demonstrated, what you learned, and why the vulnerability matters in real-world applications.
+## 7. Conclusion
+- Overall this lab was a good lesson in helping me understand the importance of server-side validation of file types which can allow attackers to manipulate the upload path and place executable files in senstitve directories.
 
-## 10. Appendix (Optional)
-- Extra screenshots
-- Notes
-- References
