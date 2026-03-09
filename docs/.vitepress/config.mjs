@@ -24,7 +24,8 @@ export default defineConfig({
                                 { text: 'Take over', link: '/try_hack_me/challenges/take_over/' },
                                 { text: 'MD2PDF', link: '/try_hack_me/challenges/MD2PDF/' },
                                 { text: 'W1seguy', link: '/try_hack_me/challenges/w1seguy/' },
-                                { text: 'Corridor', link: '/try_hack_me/challenges/corridor/' }
+                                { text: 'Corridor', link: '/try_hack_me/challenges/corridor/' },
+                                { text: 'Agent T', link: '/try_hack_me/challenges/agent_t/' }
                   
                             ]
                         }
