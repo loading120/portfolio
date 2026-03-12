@@ -71,7 +71,9 @@ export default defineConfig({
                                 { text: 'Remote code execution via web shell upload', link: '/portswigger_academy/file_upload_vulnerabilities/remote_code_execution_via_web_shell_upload/' },
                                 { text: 'Web shell upload via Content-Type restriction bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_content-Type_restriction_bypass/' },
                                 { text: 'Web shell upload via path traversal', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_path_traversal/' },
-                                { text: 'Web shell upload via extension blacklist bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_extension_blacklist_bypass/' }
+                                { text: 'Web shell upload via extension blacklist bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_extension_blacklist_bypass/' },
+                                { text: 'Web shell upload via obfuscated file extension', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_obfuscated_file_extension/' }
+                  
                   
                   
                             ]
