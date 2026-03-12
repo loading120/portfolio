@@ -18,14 +18,42 @@ export default defineConfig({
                     collapsed:true,
                     items: [
                         {
-                            text: 'Challenges',
+                            text: 'Cryptography',
                             collapsed: true,
                             items: [
-                                { text: 'Take over', link: '/try_hack_me/challenges/take_over/' },
-                                { text: 'MD2PDF', link: '/try_hack_me/challenges/MD2PDF/' },
-                                { text: 'W1seguy', link: '/try_hack_me/challenges/w1seguy/' },
-                                { text: 'Corridor', link: '/try_hack_me/challenges/corridor/' },
-                                { text: 'Agent T', link: '/try_hack_me/challenges/agent_t/' }
+                                { text: 'W1seguy', link: '/try_hack_me/cryptography/w1seguy/' }
+                  
+                            ]
+                        },
+                        {
+                            text: 'Directory Traversal',
+                            collapsed: true,
+                            items: [
+                                { text: 'Corridor', link: '/try_hack_me/directory_traversal/corridor/' }
+                  
+                            ]
+                        },
+                        {
+                            text: 'Privelege Escalation',
+                            collapsed: true,
+                            items: [
+                                { text: 'Agent T', link: '/try_hack_me/privelege_escalation/agent_t/' }
+                  
+                            ]
+                        },
+                        {
+                            text: 'Server Side Template Injections',
+                            collapsed: true,
+                            items: [
+                                { text: 'MD2PDF', link: '/try_hack_me/server-side_template_injections/MD2PDF/' }
+                  
+                            ]
+                        },
+                        {
+                            text: 'Subdomain Takeover',
+                            collapsed: true,
+                            items: [
+                                { text: 'Take Over', link: '/try_hack_me/subdomain-takeover/take_over/' }
                   
                             ]
                         }
