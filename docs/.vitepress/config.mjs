@@ -10,7 +10,15 @@ export default defineConfig({
                     text:'kali',
                     collapsed:true,
                     items: [
-                        {text: 'Dual Boot',link:'/kali/dual-boot/'}
+                        {text: 'Dual Boot',link:'/kali/dual-boot/'},
+                        {
+                            text: 'MSFConsole',
+                            collapsed: true,
+                            items: [
+                                { text: 'Meterpreter Reverse TCP', link: '/kali/msfconsole/meterpreter_reverse_tcp/' }
+                  
+                            ]
+                        },
                     ]
                 },
                 {
