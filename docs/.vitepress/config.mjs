@@ -15,7 +15,8 @@ export default defineConfig({
                             text: 'Malware',
                             collapsed: true,
                             items: [
-                                { text: 'Meterpreter Reverse TCP', link: '/kali/malware/meterpreter_reverse_tcp/' }
+                                { text: 'Meterpreter Reverse TCP', link: '/kali/malware/meterpreter_reverse_tcp/' },
+                                { text: 'Port Scanner', link: '/kali/malware/port_threading/' }
                   
                             ]
                         },
