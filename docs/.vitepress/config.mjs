@@ -65,6 +65,14 @@ export default defineConfig({
                                 { text: 'Take Over', link: '/try_hack_me/subdomain-takeover/take_over/' }
                   
                             ]
+                        },
+                        {
+                            text: 'OSINT',
+                            collapsed: true,
+                            items: [
+                                { text: 'Operation Slither', link: '/try_hack_me/OSINT/operation_slither/' }
+                  
+                            ]
                         }
 
                     ]
