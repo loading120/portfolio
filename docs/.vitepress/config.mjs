@@ -73,6 +73,14 @@ export default defineConfig({
                                 { text: 'Operation Slither', link: '/try_hack_me/OSINT/operation_slither/' }
                   
                             ]
+                        },
+                        {
+                            text: 'Web Exploitation',
+                            collapsed: true,
+                            items: [
+                                { text: 'Pickle Rick', link: '/try_hack_me/web_exploitation/pickle_rick/' }
+                  
+                            ]
                         }
 
                     ]
