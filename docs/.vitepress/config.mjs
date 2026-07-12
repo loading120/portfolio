@@ -81,6 +81,14 @@ export default defineConfig({
                                 { text: 'Pickle Rick', link: '/try_hack_me/web_exploitation/pickle_rick/' }
                   
                             ]
+                        },
+                        {
+                            text: 'Reverse Engineering',
+                            collapsed: true,
+                            items: [
+                                { text: 'Basic Malware RE', link: '/try_hack_me/reverse_engineering/basic_malware_re/' }
+                  
+                            ]
                         }
 
                     ]
