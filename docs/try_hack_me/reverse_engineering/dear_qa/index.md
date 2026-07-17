@@ -19,6 +19,35 @@
 ---
 
 ## 3. Static Analysis
+- I first ran the file command on the binary to see the architecture and what type the file was.
+
+- I then just ran the actual file which prints a hello message, asks for the user name then echoes it back.
+
+![](images/run_file.png)
+
+- After I also ran the ```checksec``` command allowing me to see if the binary was vulnerable to anything.
+
+![](images/checksec.png)
+
+- We can see that there are no stack canaries which are used to detect a stack buffer overflow before execution of malicious code can occur
+
+- The binary also has no PIE, which means they have fixed memory adresses making it easier to exploit.
+
+- I tested the buffer overflow protection by inputting a large amount of characters which you can see below leads to a segmentation fault.
+
+![](images/seg_fault.png)
+
+- I then opened up the file in ghidra to try and find any intresting patterns or information and went straight to the main() function.
+
+<img src="./images/main().png" width=10000 height=8000>
+
+
+
+
+
+
+
+
 
 - Noteable Imports: iso_scanf, printf
 - Notable functions: Main, Vuln

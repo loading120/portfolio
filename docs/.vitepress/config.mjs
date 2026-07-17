@@ -86,7 +86,8 @@ export default defineConfig({
                             text: 'Reverse Engineering',
                             collapsed: true,
                             items: [
-                                { text: 'Basic Malware RE', link: '/try_hack_me/reverse_engineering/basic_malware_re/' }
+                                { text: 'Basic Malware RE', link: '/try_hack_me/reverse_engineering/basic_malware_re/' },
+                                { text: 'Dear QA', link: '/try_hack_me/reverse_engineering/dear_qa/' }
                   
                             ]
                         }
