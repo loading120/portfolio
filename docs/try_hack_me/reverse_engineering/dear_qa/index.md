@@ -39,7 +39,7 @@
 
 - I then opened up the file in ghidra to try and find any intresting patterns or information and went straight to the main() function.
 
-<img src="./images/main().png" width=10000 height=8000>
+![](images/main.png)
 
 
 
