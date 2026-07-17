@@ -15,14 +15,14 @@ I write about cybersecurity concepts, vulnerability classes, and things I find i
 
 ---
 
-#### [Why SQL Injection Still Dominates the OWASP Top 10](/portfolio/blogs/why-sql-injection-still-dominates/)
+#### [Why SQL Injection Still Dominates the OWASP Top 10]
 *July 2026 · 8 min read*
 
 SQL Injection has been on the OWASP Top 10 for over two decades — and for good reason. In this post I explore why this classic vulnerability remains so prevalent, how it works at a fundamental level, and what can be done to prevent it. From in-band to blind and out-of-band injection, I cover the full spectrum with real examples and mitigation strategies.
 
 ---
 
-#### [Understanding Cross-Site Scripting (XSS): A Practical Guide](/portfolio/blogs/understanding-xss-practical-guide/)
+#### [Understanding Cross-Site Scripting (XSS): A Practical Guide]
 *June 2026 · 10 min read*
 
 XSS is deceptively simple but surprisingly nuanced to prevent. This deep dive covers all three types — reflected, stored, and DOM-based — with real-world attack scenarios, filter bypass techniques, and a defence-in-depth approach including Content Security Policy (CSP) and secure cookie flags.
