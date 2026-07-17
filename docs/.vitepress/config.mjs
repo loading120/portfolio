@@ -112,6 +112,14 @@ export default defineConfig({
                         }
 
                     ]
+                },
+                {
+                    text:'Blogs',
+                    collapsed:true,
+                    items: [
+                        { text: 'Why SQL Injection Still Dominates the OWASP Top 10', link: '/blogs/why-sql-injection-still-dominates/' },
+                        { text: 'Understanding XSS: A Practical Guide', link: '/blogs/understanding-xss-practical-guide/' }
+                    ]
                 }
             ]
         }
