@@ -1,41 +1,10 @@
-# Welcome to My Portfolio
+## Welcome to My Cybersecurity Portfolio
 
-Hi, I'm a cybersecurity enthusiast and aspiring penetration tester. This portfolio documents my hands-on journey through ethical hacking, vulnerability research, and security tool development.
+Hi, I'm using this portfolio to document my learning journey through cybersecurity as i really enjoy it and have a strong interest in offensive security and reverse engineering. I enjoy thinking like an attacker as it allows me to understand how systems can fail and be broken into due to various vulnerabilities and how software can be analysed, broken apart, and help my problem solving and knowledge.
 
-## What You'll Find Here
+Right now, my main focus is reverse engineering binaries and malware. At the moment I'm learning how to analyse software through both static and dynamic techniques using tools like Ghidra, GDB, and other low‑level debugging programs. This process has helped me build a foundation in assembly and C, and I’m hoping to eventually work toward recognising common patterns, behaviours, and structures within compiled programs.
 
-### 🔐 Security Writeups
-Detailed walkthroughs of labs and challenges from platforms like **TryHackMe** and **PortSwigger Academy**. Each writeup covers my methodology, tools used, and key takeaways — written to help me reinforce learning and to share knowledge with the community.
+Alongside reverse engineering, I regularly enjoy practicing offensive skills through CTF challenges on Websites like TryHackMe. These labs allow me to strengthen my problem‑solving abilities while exposing me to real vulnerabilities, exploitation techniques, and pattern recognition.
 
-### 🛠️ Projects
-Real-world tools and scripts I've built, including malware analysis projects and network utilities developed in my Kali Linux environment.
+Although reverse engineering is my main focus, I also try to stay up to date with web security tools such as Burp Suite and common web vulnerabilities as I also enjoy breaking down websites and trying to find a flaw within them.
 
-### 📝 Blogs
-I write about cybersecurity concepts, vulnerability classes, and things I find interesting in the world of offensive and defensive security. Here are my latest posts:
-
----
-
-#### [Why SQL Injection Still Dominates the OWASP Top 10]
-*July 2026 · 8 min read*
-
-SQL Injection has been on the OWASP Top 10 for over two decades — and for good reason. In this post I explore why this classic vulnerability remains so prevalent, how it works at a fundamental level, and what can be done to prevent it. From in-band to blind and out-of-band injection, I cover the full spectrum with real examples and mitigation strategies.
-
----
-
-#### [Understanding Cross-Site Scripting (XSS): A Practical Guide]
-*June 2026 · 10 min read*
-
-XSS is deceptively simple but surprisingly nuanced to prevent. This deep dive covers all three types — reflected, stored, and DOM-based — with real-world attack scenarios, filter bypass techniques, and a defence-in-depth approach including Content Security Policy (CSP) and secure cookie flags.
-
----
-
-## Skills & Tools
-
-- **Languages:** Python, Bash, PHP
-- **Tools:** Burp Suite, Nmap, Metasploit, Wireshark, Gobuster
-- **Platforms:** TryHackMe, PortSwigger Academy, HackTheBox
-- **Concepts:** Web App Pentesting, Reverse Engineering, OSINT, Privilege Escalation
-
-## Get In Touch
-
-Feel free to reach out if you'd like to collaborate, discuss a writeup, or just talk security.
