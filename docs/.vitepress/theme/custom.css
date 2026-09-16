@@ -1,10 +1,97 @@
-/* Accent bar style */
+/* -------------------------------------------------------------
+   Charlie | Cybersecurity Portfolio Theme & Background
+   ------------------------------------------------------------- */
+
+:root {
+  --vp-c-brand-1: #10b981;
+  --vp-c-brand-2: #059669;
+  --vp-c-brand-3: #047857;
+  --vp-c-brand-soft: rgba(16, 185, 129, 0.12);
+
+  /* Clean Cool Slate Light Theme */
+  --vp-c-bg: #f8fafc;
+  --vp-c-bg-alt: #ffffff;
+  --vp-c-bg-soft: #f1f5f9;
+  --vp-c-bg-elv: #ffffff;
+}
+
+.dark {
+  --vp-c-brand-1: #34d399;
+  --vp-c-brand-2: #10b981;
+  --vp-c-brand-3: #059669;
+  --vp-c-brand-soft: rgba(52, 211, 153, 0.12);
+
+  /* Deep Slate / Midnight Navy Dark Theme */
+  --vp-c-bg: #0b1120;
+  --vp-c-bg-alt: #131d31;
+  --vp-c-bg-soft: #131d31;
+  --vp-c-bg-elv: #1e293b;
+  --vp-c-border: #1e293b;
+  --vp-c-divider: #1e293b;
+}
+
+/* -------------------------------------------------------------
+   Interactive Topic Grid on Homepage
+   ------------------------------------------------------------- */
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.topic-grid h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--vp-c-brand-1);
+  color: var(--vp-c-text-1);
+}
+
+.topic-grid ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.topic-grid li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.topic-grid a {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease, color 0.15s ease;
+}
+
+.topic-grid a:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-brand-1);
+  transform: translateX(3px);
+}
+
+/* -------------------------------------------------------------
+   Outline and Navigation Adjustments
+   ------------------------------------------------------------- */
+
 .VPDocOutlineItem .outline-link {
   display: block;
-  padding: 0.4rem 0.75rem;
-  border-left: 3px solid transparent;
+  padding: 0.35rem 0.75rem;
+  border-left: 2px solid transparent;
   white-space: normal;
   line-height: 1.4;
+  font-size: 0.85rem;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 
@@ -13,13 +100,14 @@
   background: var(--vp-c-bg-soft);
 }
 
-/* Level-3 indentation */
 .VPDocOutlineItem .outline-link.level-3 {
   padding-left: 1.25rem;
-  border-left-width: 2px;
 }
 
-/* Lightbox modal overlay */
+/* -------------------------------------------------------------
+   Lightbox modal overlay & Image Zoom (Preserved)
+   ------------------------------------------------------------- */
+
 .lightbox-modal {
   display: none;
   position: fixed;
@@ -35,7 +123,6 @@
   cursor: zoom-out;
 }
 
-/* Lightbox Content (Image) */
 .lightbox-content {
   margin: auto;
   display: block;
@@ -57,11 +144,9 @@
   }
   to {
     transform: scale(1);
-    opacity: 1;
   }
 }
 
-/* Close Button */
 .lightbox-close {
   position: absolute;
   top: 20px;
@@ -90,7 +175,6 @@
   transform: scale(1.08);
 }
 
-/* Cursor and hover effect for zoomable images */
 .vp-doc img:not(.no-zoom) {
   cursor: zoom-in;
   transition: opacity 0.25s ease;
@@ -100,7 +184,6 @@
   opacity: 0.92;
 }
 
-/* Zoom Controls Toolbar */
 .lightbox-zoom-controls {
   position: absolute;
   right: 30px;

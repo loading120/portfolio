@@ -2,36 +2,75 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
     base: '/portfolio/',
-    themeConfig:{
-        siteTitle:"portfolio",
-        sidebar:{
-            '/':[
+    title: "Charlie | Security Portfolio",
+    description: "Cybersecurity portfolio covering reverse engineering, offensive security, CTF writeups, and web application security.",
+    themeConfig: {
+        siteTitle: "Charlie | Security Portfolio",
+        nav: [
+            { text: 'Home', link: '/' },
+            { text: 'Kali & Malware', link: '/kali/' },
+            { text: 'TryHackMe Labs', link: '/try_hack_me/' },
+            { text: 'PortSwigger', link: '/portswigger_academy/' },
+            { text: 'Cloud Security', link: '/cloud_security/' },
+            { text: 'Blog', link: '/blogs/' }
+        ],
+        sidebar: {
+            '/kali/': [
                 {
-                    text:'kali',
-                    collapsed:true,
+                    text: 'Kali & Tooling',
                     items: [
-                        {text: 'Dual Boot',link:'/kali/dual-boot/'},
+                        { text: 'Section Overview', link: '/kali/' },
+                        { text: 'Dual Boot Setup', link: '/kali/dual-boot/' },
                         {
-                            text: 'Malware',
-                            collapsed: true,
+                            text: 'Malware & Tools',
+                            collapsed: false,
                             items: [
                                 { text: 'Meterpreter Reverse TCP', link: '/kali/malware/meterpreter_reverse_tcp/' },
-                                { text: 'Port Scanner', link: '/kali/malware/port_threading/' }
-                  
+                                { text: 'Port Scanner Tool', link: '/kali/malware/port_threading/' }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            '/try_hack_me/': [
+                {
+                    text: 'TryHackMe Labs',
+                    items: [
+                        { text: 'Section Overview', link: '/try_hack_me/' },
+                        {
+                            text: 'Reverse Engineering',
+                            collapsed: false,
+                            items: [
+                                { text: 'Basic Malware RE', link: '/try_hack_me/reverse_engineering/basic_malware_re/' },
+                                { text: 'Dear QA', link: '/try_hack_me/reverse_engineering/dear_qa/' }
                             ]
                         },
-                    ]
-                },
-                {
-                    text:'Try Hack me',
-                    collapsed:true,
-                    items: [
+                        {
+                            text: 'Web Exploitation',
+                            collapsed: false,
+                            items: [
+                                { text: 'Pickle Rick', link: '/try_hack_me/web_exploitation/pickle_rick/' }
+                            ]
+                        },
+                        {
+                            text: 'Privilege Escalation',
+                            collapsed: false,
+                            items: [
+                                { text: 'Agent T', link: '/try_hack_me/privelege_escalation/agent_t/' }
+                            ]
+                        },
+                        {
+                            text: 'Server Side Template Injection',
+                            collapsed: false,
+                            items: [
+                                { text: 'MD2PDF', link: '/try_hack_me/server-side_template_injections/MD2PDF/' }
+                            ]
+                        },
                         {
                             text: 'Cryptography',
                             collapsed: true,
                             items: [
                                 { text: 'W1seguy', link: '/try_hack_me/cryptography/w1seguy/' }
-                  
                             ]
                         },
                         {
@@ -39,23 +78,6 @@ export default defineConfig({
                             collapsed: true,
                             items: [
                                 { text: 'Corridor', link: '/try_hack_me/directory_traversal/corridor/' }
-                  
-                            ]
-                        },
-                        {
-                            text: 'Privelege Escalation',
-                            collapsed: true,
-                            items: [
-                                { text: 'Agent T', link: '/try_hack_me/privelege_escalation/agent_t/' }
-                  
-                            ]
-                        },
-                        {
-                            text: 'Server Side Template Injections',
-                            collapsed: true,
-                            items: [
-                                { text: 'MD2PDF', link: '/try_hack_me/server-side_template_injections/MD2PDF/' }
-                  
                             ]
                         },
                         {
@@ -63,7 +85,6 @@ export default defineConfig({
                             collapsed: true,
                             items: [
                                 { text: 'Take Over', link: '/try_hack_me/subdomain-takeover/take_over/' }
-                  
                             ]
                         },
                         {
@@ -71,56 +92,51 @@ export default defineConfig({
                             collapsed: true,
                             items: [
                                 { text: 'Operation Slither', link: '/try_hack_me/OSINT/operation_slither/' }
-                  
-                            ]
-                        },
-                        {
-                            text: 'Web Exploitation',
-                            collapsed: true,
-                            items: [
-                                { text: 'Pickle Rick', link: '/try_hack_me/web_exploitation/pickle_rick/' }
-                  
-                            ]
-                        },
-                        {
-                            text: 'Reverse Engineering',
-                            collapsed: true,
-                            items: [
-                                { text: 'Basic Malware RE', link: '/try_hack_me/reverse_engineering/basic_malware_re/' },
-                                { text: 'Dear QA', link: '/try_hack_me/reverse_engineering/dear_qa/' }
-                  
                             ]
                         }
-
                     ]
-                },
+                }
+            ],
+            '/portswigger_academy/': [
                 {
-                    text:'Portswigger academy',
-                    collapsed:true,
+                    text: 'PortSwigger Web Security',
                     items: [
+                        { text: 'Section Overview', link: '/portswigger_academy/' },
                         {
-                            text: 'File upload vulnerabilities',
-                            collapsed: true,
+                            text: 'File Upload Vulnerabilities',
+                            collapsed: false,
                             items: [
-                                { text: 'Remote code execution via web shell upload', link: '/portswigger_academy/file_upload_vulnerabilities/remote_code_execution_via_web_shell_upload/' },
-                                { text: 'Web shell upload via Content-Type restriction bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_content-Type_restriction_bypass/' },
-                                { text: 'Web shell upload via path traversal', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_path_traversal/' },
-                                { text: 'Web shell upload via extension blacklist bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_extension_blacklist_bypass/' },
-                                { text: 'Web shell upload via obfuscated file extension', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_obfuscated_file_extension/' }
-                  
+                                { text: 'RCE via Web Shell Upload', link: '/portswigger_academy/file_upload_vulnerabilities/remote_code_execution_via_web_shell_upload/' },
+                                { text: 'Content-Type Bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_content-Type_restriction_bypass/' },
+                                { text: 'Path Traversal Bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_path_traversal/' },
+                                { text: 'Extension Blacklist Bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_extension_blacklist_bypass/' },
+                                { text: 'Obfuscated Extension Bypass', link: '/portswigger_academy/file_upload_vulnerabilities/web_shell_upload_via_obfuscated_file_extension/' }
                             ]
                         }
-
                     ]
-                },
+                }
+            ],
+            '/cloud_security/': [
                 {
-                    text:'Blogs',
-                    collapsed:true,
+                    text: 'Cloud Security',
                     items: [
-                        
+                        { text: 'Overview & Notes', link: '/cloud_security/' }
+                    ]
+                }
+            ],
+            '/blogs/': [
+                {
+                    text: 'Blog & Articles',
+                    items: [
+                        { text: 'Overview', link: '/blogs/' }
                     ]
                 }
             ]
+        },
+        socialLinks: [],
+        footer: {
+            message: 'Cybersecurity Notes & Technical Writeups',
+            copyright: 'Charlie'
         }
     }
-})
+});
