@@ -8,7 +8,7 @@ export default defineConfig({
         siteTitle: "Charlie | Security Portfolio",
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Kali & Malware', link: '/kali/' },
+            { text: 'Malware & Security Tooling', link: '/kali/' },
             { text: 'TryHackMe Labs', link: '/try_hack_me/' },
             { text: 'PortSwigger', link: '/portswigger_academy/' },
             { text: 'Cloud Security', link: '/cloud_security/' },
@@ -17,7 +17,7 @@ export default defineConfig({
         sidebar: {
             '/kali/': [
                 {
-                    text: 'Kali & Tooling',
+                    text: 'Malware & Security Tooling',
                     items: [
                         { text: 'Section Overview', link: '/kali/' },
                         { text: 'Dual Boot Setup', link: '/kali/dual-boot/' },

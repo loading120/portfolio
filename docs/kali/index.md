@@ -1,6 +1,6 @@
-# Kali Linux & Security Tooling
+# Malware & Security Tooling
 
-Welcome to the Kali Linux section of my portfolio. This area houses documented guides for environment setup, custom tool development, and malware analysis labs.
+Welcome to the Malware & Security Tooling section of my portfolio. This area houses documented guides for environment setup, custom tool development, and malware analysis labs.
 
 ---
 
