@@ -10,5 +10,16 @@ Welcome to the Cloud Security section. This area is dedicated to notes, architec
 * **Cloud Infrastructure Security**: Hardening VPC networks, security groups, S3 bucket permissions, and API endpoints.
 * **Threat Detection & Logging**: Monitoring AWS CloudTrail, GuardDuty, and Azure Sentinel for suspicious administrative actions.
 
-> [!NOTE]
-> Detailed cloud security research notes and scenario walkthroughs are continuously added here as new labs are completed.
+## Featured Labs & Writeups
+
+<div class="project-grid">
+
+### [S3 Bucket Creation & IAM Access Logging](/cloud_security/s3_bucket_logs/)
+* **Category**: AWS Infrastructure & Logging
+* **Description**: Setting up an S3 bucket, configuring IAM user permissions, simulating file download operations, and auditing access logs for monitoring and compliance.
+* [View S3 Bucket Logging Lab →](/cloud_security/s3_bucket_logs/)
+
+</div>
+
+---
+

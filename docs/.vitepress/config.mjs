@@ -120,7 +120,8 @@ export default defineConfig({
                 {
                     text: 'Cloud Security',
                     items: [
-                        { text: 'Overview & Notes', link: '/cloud_security/' }
+                        { text: 'Overview & Notes', link: '/cloud_security/' },
+                        { text: 'S3 Bucket & Access Logging', link: '/cloud_security/s3_bucket_logs/' }
                     ]
                 }
             ],
