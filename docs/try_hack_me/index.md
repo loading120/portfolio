@@ -9,6 +9,7 @@ Welcome to my collection of TryHackMe laboratory writeups and CTF walkthroughs. 
 ### Reverse Engineering
 * **[Basic Malware RE](/try_hack_me/reverse_engineering/basic_malware_re/)**: Static analysis of obfuscated binaries, string extraction, and entry point inspection.
 * **[Dear QA](/try_hack_me/reverse_engineering/dear_qa/)**: Binary exploitation lab involving stack buffer overflow and target address redirection.
+* **[Security Footage](/try_hack_me/reverse_engineering/security_footage/)**: Reconstructing video frames from raw TCP stream packet captures using custom Python parsing and video compilation scripts.
 
 ### Web Exploitation
 * **[Pickle Rick](/try_hack_me/web_exploitation/pickle_rick/)**: Web application recon, command injection, source code inspection, and file retrieval.
