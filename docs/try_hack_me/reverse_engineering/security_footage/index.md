@@ -182,6 +182,54 @@ print(f"\nDone. Extracted {images_found} image(s).")
 
 ![](images/extract_video.png)
 
+```python
+#!/usr/bin/env python3
+
+import cv2
+import os
+from glob import glob
+
+IMAGE_DIR = "extracted_images"
+OUTPUT_VIDEO = "output.mp4"
+FPS = 10  # Adjust as needed
+
+# Find all images
+images = sorted(
+    glob(os.path.join(IMAGE_DIR, "*.jpg")) +
+    glob(os.path.join(IMAGE_DIR, "*.jpeg")) +
+    glob(os.path.join(IMAGE_DIR, "*.png")) +
+    glob(os.path.join(IMAGE_DIR, "*.gif"))
+)
+
+if not images:
+    raise Exception("No images found!")
+
+# Read first image to get dimensions
+first = cv2.imread(images[0])
+height, width = first.shape[:2]
+
+# Create video writer
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+video = cv2.VideoWriter(OUTPUT_VIDEO, fourcc, FPS, (width, height))
+
+for img_path in images:
+    frame = cv2.imread(img_path)
+
+    if frame is None:
+        print(f"Skipping unreadable file: {img_path}")
+        continue
+
+    # Resize if dimensions differ
+    if frame.shape[:2] != (height, width):
+        frame = cv2.resize(frame, (width, height))
+
+    video.write(frame)
+
+video.release()
+
+print(f"Video saved as {OUTPUT_VIDEO}")
+```
+
 ### 5.2 Output & Playback
 - I tried to play the generated .mp4 file however I had no way of viewing this so had to install vlc media player to be able to view it.
 
